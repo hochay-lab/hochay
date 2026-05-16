@@ -99,9 +99,13 @@
                     return;
                 }
 
-                msgBox.style.color = "green";
-                msgBox.innerText = "Đăng nhập thành công! Đang chuyển hướng...";
-                // Bạn có thể chuyển hướng trang tại đây, ví dụ: window.location.href = "dashboard.html";
+               msgBox.style.color = "green";
+msgBox.innerText = "Đăng nhập thành công! Đang chuyển hướng...";
+
+// Chờ 1.5 giây để người dùng kịp nhìn thấy thông báo rồi tự động chuyển về trang chủ index.html
+setTimeout(() => {
+    window.location.href = "index.html"; 
+}, 1500);
 
             } else {
                 // XỬ LÝ ĐĂNG KÝ + TỰ ĐỘNG GỬI EMAIL XÁC NHẬN (2FA)
